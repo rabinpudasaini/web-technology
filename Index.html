@@ -14,11 +14,11 @@
           <nav>
               <img src="images/my logo.jpg" class="logo">
                <ul>
-                    <li> <a href="header " > Home</a></li>
-                    <li> <a href="about" > About</a></li>
-                    <li> <a href="portfolio" > Services</a></li>
-                    <li> <a href="Services" > Portfolio</a></li>
-                    <li> <a href="#" > Contact Me </a></li>
+                    <li> <a href="#header " > Home</a></li>
+                    <li> <a href="#about" > About</a></li>
+                    <li> <a href="#Portfolio" > Services</a></li>
+                    <li> <a href="#Services" > Portfolio</a></li>
+                    <li> <a href="#Contact" > Contact Me </a></li>
                 </ul>
             </nav>
            <div class="detel">
@@ -49,25 +49,25 @@
                     cumque id veritatis!</p>
 
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('Skills')"> Skills</p>
-                        <p class="tab-links" onclick="opentab('Experiences')"> Experiences</p>
-                        <p class="tab-links" onclick="opentab('Education')"> Education</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')"> Skills</p>
+                        <p class="tab-links active-link" onclick="opentab('experiences')"> Experiences</p>
+                        <p class="tab-links active-link" onclick="opentab('education')"> Education</p>
                     </div> 
-                    <div class="tab-contains active-tab" id="Skills">
+                    <div class="tab-contains active-tab" id="skills">
                         <ul>
                             <li> <span> UI/UX</span><br>Designing Web interface</li>
                             <li> <span>app developmant</span><br>Web app development</li>
                             <li> <span> web developmant</span><br>Website development</li>
                         </ul>
                     </div>
-                    <div class="tab-contains" id="Experiences">
+                    <div class="tab-contains" id="experiences">
                         <ul>
                             <li> <span> 2023 - current</span><br> No job studying</li>
                             <li> <span> 2020 - 2022</span><br> freelancing</li>
                             <li> <span> 2018 - 2020</span><br>No job</li>
                         </ul>
                     </div>
-                    <div class="tab-contains" id="Education">
+                    <div class="tab-contains" id="education">
                         <ul>
                             <li> <span> 2023 - current</span><br>Herald College Kathmandu</li>
                             <li> <span> 2020 - 2022</span><br>Rehdon College</li>
@@ -162,14 +162,14 @@
                         <a href=""><i class="fa-brands fa-twitter"></i></a>
                         <a href=""><i class="fa-brands fa-linkedin"></i></a>
                     </div> 
-                    <a href="Resume (CV).pdf" download class="btn2"> Download CV</a> 
+                    <a href="Resume (CV).pdf" download class="btn btn2"> Download CV</a> 
                 </div>
                 <div class="contact-right">
                     <form>
                         <input type="text" name="Name" placeholder="Your Name" required>
                         <input type="email" name="Email" placeholder="Your Email" required>
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn2"> Submit</button>
+                        <button type="submit" class="btn btn2"> Submit</button>
                     </form>
                 </div>
             </div>
@@ -186,17 +186,17 @@
  
     <script>
 
-        var tablink = document.getElementsByClassName("tab-links");
+        var tablinks = document.getElementsByClassName("tab-links");
         var tabelements = document.getElementsByClassName("tab-contains");
 
         function opentab(tabname){
             for(tablink of tablinks){
-                tablink.classlist.remove("active-link");
+                tablink.classlist.remove("active-links");
             }
             for(tabecontain of tabcontains){
                 tabcontains.classlist.remove("active-tab");
             }
-            event.currentTarget.classlist.add("active-link");
+            event.currentTarget.classlist.add("active-links");
             document.getElementById(tabname).classList.add("active-tab");
         }
     </script>

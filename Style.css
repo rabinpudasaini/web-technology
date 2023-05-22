@@ -3,6 +3,12 @@
     padding: 0;
    font-family: 'poppins', sans-serif;
    box-sizing: border-box;
+   background-color: #080808;
+}
+
+html{
+    scroll-behavior: smooth;
+
 }
 .body{
     background: #080808;
@@ -11,9 +17,7 @@
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(images/background\ image.webp);
-    background-size: cover;
-    background-position:center;
+
 }
 
 nav{
@@ -85,7 +89,6 @@ span{
 #about{
    padding: 80px 0;
    color: white;
-   background-image: url(images/background\ image.webp);
 
 }
 .row{
@@ -116,10 +119,10 @@ span{
 .tab-titles{
     display: flex;
     margin: 20px 0 40px;
-    color: gray;
-}
 
-.tab-link{
+} 
+
+.tab-links{
     margin-right: 50px;
     font-size: 18px;
     font-weight: 500;
@@ -128,36 +131,47 @@ span{
 
 
 }
-.tab-link.active.link::after{
-    contain: ''; 
-    width: 0; 
+.tab-links.active-link::after{
+    content: '';
+    width: 0%;
     height: 3px;
     background: #ff004f;
     position: absolute;
     left: 0;
-    bottom: -8px;
-    transition:0.5s;  
+    bottom: -6px; 
 } 
-.tab-link.active-link::after{
+
+.tab-links.active-link:hover::after{
     width: 50%;
 } 
+.tab-contains ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contains ul li span{
+    color: #6f00ff;
+    font-size: 14px;
+}
+.tab-contains{
+    display: none;
+}
 
 /*............services.....*/
 #Services{
-    padding: 50px;
-    margin: 30px; 
+   padding: 30px 0;
+ 
     
 
 }
 .Services-list{
-    color: blueviolet;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     grid-gap: 40px;
     margin-top: 50px;
+    color: white;
 }
 .Services-list div{
-    background:rgb(75, 74, 74);
+    background: #262626;
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
@@ -167,14 +181,13 @@ span{
 
 .Services-list div i{
     font-size: 50px;
-    margin-bottom: 30px;  
-    display: inline-block; 
+    margin-bottom: 30px;
+   
 }
 .Services-list div h2{
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 15px;
-    display: inline-block;
 }
 .Services-list div a{
     text-decoration: none;
@@ -259,15 +272,15 @@ span{
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid #ff004f;
+    border: 1px solid black;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
-    color: black;
+    color: white;
     transition: background 0.5s;
 }
 .btn:hover{
-    background: #ff00ee;
+    background: blue;
 }
 /*-------------contact--*/
 .Contact-left{
@@ -275,9 +288,10 @@ span{
 }
 .Contact-left p{
     margin-top: 30px;
+    color: white;
 }
 .Contact-left p i{
-    color: #ff004f;
+    color: white;
     margin-right: 15px;
     font-size: 25px;
 }
@@ -293,7 +307,7 @@ span{
     text-decoration: none;
     font-size:30px;
     margin-right: 15px;
-    color: darkorchid;
+    color: #ababab;
     display: inline-block;
     transform: transform 0.5s;
 }
@@ -302,15 +316,10 @@ span{
     color: #ff004f;
     transform: translateY(-5px);
 }
-.btn2{
-    background: #ff004f;
-    padding: 10px 18px;
-    text-decoration: none;
-    font-weight: bold;
-    color: blue;
+.btn.btn2{
     display: inline-block;
-    margin: 30px 0;
-    border-radius: 50px;
+    background: #ff004f;
+    
 
 }
 .contact-right form{
@@ -321,11 +330,12 @@ form input, form textarea{
     width: 100%;
     border: 0;
     outline: none;
-    background:maroon;
+    background: #262626;
     padding: 15px;
     margin: 15px 0;
-    color:blue;
-    border-radius: 6px;
+    color :#fff;
+    font-size: 18px;
+    border-radius: 6px; 
 }
 form .btn2{
     padding: 14px 60px;
@@ -337,9 +347,9 @@ form .btn2{
 .copyright{
     width: 100%;
     text-align: center;
-    color: black;
+    color: white;
     padding: 25px 0;
-    background: gray;
+    background: #262626;
     font-weight: 300;
     margin-top: 20px;
 }
@@ -347,9 +357,6 @@ form .btn2{
     color: #ff004f;
 }
 /*-------css for small screen----*/
-@media only screen and (max-with: 600px){
-
-}
 
  
 
